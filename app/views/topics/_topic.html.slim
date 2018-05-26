@@ -1,0 +1,15 @@
+tr
+  td
+    .icon-btn-col
+      i.fa.fa-telegram
+    .details-col
+      h3.title
+        = link_to topic.title, topic
+      p.extra-info
+        = topic.created_at.strftime(ConstantsHelper::DATETIME_FORMAT)
+        span.post-author
+          = record_author_link topic
+  td = topic.posts.size
+  td = topic.views
+  td
+    = latest_post topic

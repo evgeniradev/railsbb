@@ -1,0 +1,10 @@
+.form-container
+  = form_for @settings, url: admin_setting_path(@settings) do | f |
+    = f.text_field :title, class: 'title', placeholder: 'Title'
+    = f.text_field :description, placeholder: 'Description'
+    = f.time_zone_select(:time_zone, ActiveSupport::TimeZone.us_zones)
+    = f.file_field :logo, placeholder: 'Logo', class: 'image-upload'
+    .logo
+      = image_tag(settings.logo.url || 'logo.jpg')
+    = f.cktext_area :terms_and_conditions, placeholder: 'Terms and Conditions'
+    = f.submit class: 'btn-submit', value: 'Update'

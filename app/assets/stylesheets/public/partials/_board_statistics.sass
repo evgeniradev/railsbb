@@ -1,0 +1,20 @@
+.public
+  .board-statistics
+    margin-top: $main_elements_space_between
+
+    ul
+      opacity: 0.96
+      font-size: 0.85em
+      color: $softest_text
+
+      li
+        span:not(.newest-user)
+          color: $softer_text
+          font-family: sans-serif
+          font-weight: $bold
+
+    ul:first-child
+      display: inline-block
+
+    ul:nth-child(2)
+      float: right

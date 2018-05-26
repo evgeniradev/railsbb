@@ -1,0 +1,16 @@
+.board-statistics
+  ul
+    li
+      | Newest user:
+      span.newest-user
+        '
+        = newest_user_link
+  ul
+    li
+      | Board statistics:
+      span  #{users_count}
+      |  users,
+      span  #{topics_count}
+      |  topics,
+      span  #{posts_count}
+      |  posts

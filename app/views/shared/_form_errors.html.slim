@@ -1,0 +1,4 @@
+- if errors.present?
+  .form_errors
+    - errors.each do | error |
+      = content_tag :p, error

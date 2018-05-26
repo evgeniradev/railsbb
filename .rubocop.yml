@@ -1,0 +1,42 @@
+Style/Encoding:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/UnlessElse:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 99
+
+Metrics/AbcSize:
+  Max: 30
+
+Metrics/BlockLength:
+  Max: 60
+
+Metrics/MethodLength:
+  Max: 60
+
+Metrics/CyclomaticComplexity:
+  Max: 15
+
+Metrics/ModuleLength:
+  Max: 130
+
+Metrics/PerceivedComplexity:
+  Max: 15
+
+AllCops:
+  Exclude:
+    - config/environments/*.rb
+    - config/initializers/*.rb
+    - db/migrate/*.rb
+    - db/schema.rb
+    - vendor/**/*
+    - bin/*
+    - Rakefile

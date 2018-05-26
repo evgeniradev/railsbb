@@ -1,0 +1,13 @@
+= render 'header'
+.wrapper
+  .table-container.admin
+    table
+      thead
+        tr
+          th Title
+          th.section-name Section
+          th Topics
+          th Posts
+      tbody
+        = render prepare @forums
+= paginate @forums

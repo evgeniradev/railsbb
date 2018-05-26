@@ -1,0 +1,7 @@
+- @heading = 'Terms and Conditions'
+
+.standard-container
+  h2 = @heading
+  .text.ck-editor
+    = 'Empty' if @terms_and_conditions.blank?
+    = raw @terms_and_conditions

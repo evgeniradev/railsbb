@@ -1,0 +1,14 @@
+= render 'header'
+.table-container
+  table
+    thead
+      tr
+        th Username
+        th Status
+        th Role
+        th Last Seen
+        th Topics
+        th Posts
+    tbody
+      = render prepare @users
+= paginate @users

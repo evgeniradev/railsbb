@@ -1,0 +1,6 @@
+- @heading = 'Manage Sections'
+
+.content-menu
+  .col-1
+    h2 = @heading
+    = button_to 'Add Section', new_admin_section_path, method: :get, class: 'btn'

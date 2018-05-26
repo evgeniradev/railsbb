@@ -1,0 +1,40 @@
+.content-menu
+  .col-1
+    h2 Manage Access
+    button Ban IP
+  .col-2
+    .search-container
+      form action='' 
+        input.search name='search' placeholder='Search' type='text' /
+        button.btn-search type='submit'
+          i.fa.fa-search
+.table-container
+  table
+    thead
+      tr
+        th.name IP Range
+        th User/s
+        th.role Location
+        th Banned Since
+    tbody
+      - (1...45).each do
+        tr
+          td.name
+            .icon-btn-col
+              button Edit
+            .details-col
+              h3.title
+                a href='#' 192.168.1.1
+          td
+            a href='#' John Smith
+          td.role London
+          td Fri 4 Jan, 2018 22:30
+ul.pagination.bottom
+  li
+    a 1
+  li
+    a 2
+  li
+    a 3
+  li
+    a 4

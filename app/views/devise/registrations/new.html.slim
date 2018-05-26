@@ -1,0 +1,14 @@
+- @heading = 'Sign up'
+
+.standard-container.form-container.registrations.public
+  h2 = @heading
+  = render 'shared/form_errors', errors: devise_error_messages!
+  = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'login-signup' }) do |f|
+    = f.text_field :username, autofocus: true, autocomplete: 'username', placeholder: 'Username', class: 'username'
+    = f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: 'Email', class: 'email'
+    = f.password_field :password, autocomplete: "off",  placeholder: 'Password / min 6 characters', class: 'password'
+    = f.password_field :password_confirmation, autocomplete: "off",  placeholder: 'Password Confirmation', class: 'password'
+    .checkbox-wrapper
+      = f.check_box :terms_and_conditions
+      = link_to 'Terms and Conditions', terms_and_conditions_path, class: 'label', target: '_blank'
+    = f.submit 'Sign up', class: 'btn-submit'

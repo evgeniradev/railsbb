@@ -1,0 +1,20 @@
+- @heading = 'My Account'
+- disable_warning = 'Disabling your account will hide your profile information, such as your username. Any topics and posts you have created will however remain visible. If you wish to enable your account at a later stage, you will need to contact us. Are you sure you want to disable your account?'
+
+.standard-container.form-container.registrations.my-account.public
+  h2 = @heading
+  = render 'shared/form_errors', errors: devise_error_messages!
+  = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'login-signup'}) do |f|
+    h3.disabled-input = current_user.username
+    = f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: 'Email'
+    - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+      p Currently waiting confirmation for: #{resource.unconfirmed_email}
+    = f.password_field :password, autocomplete: 'off', placeholder: 'New password / min 6 characters'
+    = f.password_field :password_confirmation, autocomplete: 'off', placeholder: 'Password confirmation'
+    = f.password_field :current_password, autocomplete: 'off', placeholder: 'Current password'
+    = f.text_field :description, autocomplete: 'off', placeholder: 'Description / max 40 characters'
+    = f.submit 'Update', class: 'btn-submit'
+  = button_to 'Disable My Account', disable_user_path, data: { confirm: disable_warning }, class: 'login-signup btn-submit btn-delete'
+
+
+  //= # button_to 'Cancel my account', registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'login-signup btn-submit btn-delete'

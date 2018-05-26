@@ -1,0 +1,6 @@
+= render 'shared/form_errors', errors: flash[:errors]
+= form_for @post, url: action, html: { class: 'general-form' } do | f |
+  h3.disabled-input = 'Re: %s' % topic.title
+  = f.cktext_area :content, value: post_content, placeholder: 'Content'
+  = f.hidden_field :topic_id, value: topic.id, as: :hidden
+  = f.submit class: 'btn-submit', value: 'Submit'

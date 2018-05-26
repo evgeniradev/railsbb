@@ -1,0 +1,10 @@
+tr
+  td 
+    .icon-btn-col
+      = button_to 'Edit', edit_admin_section_path(section), method: :get, class: 'btn'
+    .details-col
+      h3.title
+        = link_to section.title, section
+  td = section.forums.size
+  td = section.topics.size
+  td = section.posts.size

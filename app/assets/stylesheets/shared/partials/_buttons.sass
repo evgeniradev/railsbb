@@ -1,0 +1,48 @@
+// the cke_ elements refer to the SimpleLink dialogue box
+
+
+button, .btn, .btn-post, .btn-submit, .image-upload
+  cursor: pointer
+
+a.btn
+  padding: 0
+
+.cke_dialog_ui_button.cke_dialog_ui_button_cancel,
+.cke_dialog_ui_button.cke_dialog_ui_button_ok
+  width: 7em
+
+button, .btn, input.btn-post,
+.cke_dialog_ui_button.cke_dialog_ui_button_cancel,
+.cke_dialog_ui_button.cke_dialog_ui_button_cancel:focus,
+.cke_dialog_ui_button.cke_dialog_ui_button_ok
+  display: inline-block
+  font-family: $highlight_font_family
+  font-size: 0.9em
+  color: $strong_highlight
+  padding: 0.2em 0.5em
+  border: $strong_border
+  background-color: $softer_background
+  border-radius: $standard_radius
+  text-align: center
+  text-transform: capitalize
+
+.btn-post
+  width: 4em
+  background-color: $contrast_to_main_highlight
+
+.open-topic
+  width: 6.7em
+
+form input.btn-submit,
+.cke_dialog_ui_button.cke_dialog_ui_button_ok,
+.cke_dialog_ui_button.cke_dialog_ui_button_ok:hover,
+.cke_dialog_ui_button.cke_dialog_ui_button_ok:focus
+    border: none
+    box-shadow: none
+    background-color: $main_highlight
+    color: $contrast_to_main_highlight
+    display: block
+form input.btn-delete
+    background-color: $warning
+
+

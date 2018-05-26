@@ -1,0 +1,136 @@
+.registrations .form_errors
+  width: 300px
+
+.topics .form_errors
+  width: 500px
+
+.cke_dialog
+  border-radius: $standard_radius !important
+  overflow: hidden
+
+  .cke_dialog_title
+    color: $strongest_highlight
+
+  .cke_dialog_ui_text .cke_dialog_ui_labeled_label,
+  .cke_dialog_ui_html
+    color: $regular_text
+    font-weight: $normal
+
+  .cke_dialog_title, .cke_dialog_footer, .cke_dialog_contents
+    background-color: $contrast_to_main_highlight
+    border-color: $soft_border_color
+
+    input:focus, input:hover
+      border: $strongest_border
+
+.form-container, .cke_dialog
+  .general-form
+    width: 526px
+
+  .login-signup,
+    width: 300px
+
+  .form_errors
+    margin-bottom: 1em
+
+    p
+      color: $error
+
+  form, .cke_dialog_ui_vbox
+    margin: 0 auto
+
+    .field_with_errors
+      border: 1px solid $error
+      border-radius: $standard_radius
+
+      input, textarea, select, .cke_1
+        border: none
+
+    h3.disabled-input
+      background-color: $softer_background
+      padding: 0.7em 1em
+      letter-spacing: $standard_letter_spacing
+      font-size: 0.9em
+      border-radius: $standard_radius
+      opacity: 0.6
+      cursor: not-allowed
+      border: $soft_border
+      margin-bottom: 1em
+
+    textarea
+      width: 100%
+      height: 20em
+
+    label, .label
+      font-weight: $bold
+      color: $softest_text
+      font-size: 1em
+
+    input:not(:last-child):not(.image-upload), textarea, select, .field_with_errors, .logo
+      margin-bottom: 1em
+
+    .logo
+      margin-top: 0.5em
+
+    input, select:not(.multipick), .btn
+      height: 2.76em
+
+    input, textarea, select
+      color: $regular_text
+
+    .cke_1
+      border-radius: $standard_radius
+      border: $strongest_border
+      overflow: hidden
+
+      #cke_1_top
+        background-color: $contrast_to_main_highlight
+        border-color: $soft_border_color
+
+    input, textarea, select, .btn
+      font-size: 0.9em
+      border: $strongest_border
+      letter-spacing: $standard_letter_spacing
+      box-sizing : border-box
+      width: 100%
+      max-width: 100%
+      display: block
+      padding: 0.7em 1em
+      border-radius: $standard_radius
+      background-color: $softer_background
+      outline: none
+      font-family: $base_font_family
+
+    .checkbox-wrapper
+      margin: 1em 0
+      width: 100%
+      display: flex
+
+      .field_with_errors
+        height: 1em
+        padding: 0
+
+      input
+        margin: 0
+        margin-top: 0.13em
+        height: 0.9em
+
+      input, label
+        width: auto
+        display: inline-block
+
+      label, .label
+        font-size: 0.89em
+        margin-left: 0.5em
+
+      input
+        align-self: center
+
+    .btns-container
+      display: flex
+      justify-content: flex-end
+
+    .btn-submit
+      margin-top: 1em
+      display: inline-block
+      margin-bottom: 0

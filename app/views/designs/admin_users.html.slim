@@ -1,0 +1,43 @@
+.content-menu
+  .col-1
+    h2 Manage Sections
+    button Add Section
+  .col-2
+    .search-container
+      form action='' 
+        input.search name='search' placeholder='Search' type='text' /
+        button.btn-search type='submit'
+          i.fa.fa-search
+.table-container
+  table
+    thead
+      tr
+        th.name Name
+        th Status
+        th Role
+        th Last Seen
+        th Topics
+        th Posts
+    tbody
+      - (1...45).each do
+        tr
+          td.name
+            .icon-btn-col
+              button Edit
+            .details-col
+              h3.title
+                a href='#' John Smith
+          td Active
+          td Regular
+          td Fri 4 Jan, 2018 22:30
+          td 321
+          td 321
+ul.pagination.bottom
+  li
+    a 1
+  li
+    a 2
+  li
+    a 3
+  li
+    a 4

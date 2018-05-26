@@ -1,0 +1,98 @@
+.table-container:not(:last-child)
+  margin-bottom: 1em
+
+.table-container.forum
+  margin-bottom: 0
+
+.table-container
+  background-color: $main_highlight
+  border-radius: $standard_radius
+  padding: $section_thickness
+  padding-top: 0
+  margin: 0 auto
+  box-sizing: border-box
+
+  table
+    width: 100%
+    border-radius: $standard_radius
+    background-color: $soft_background
+    border-collapse: collapse
+    column-width: 1110px
+
+    tr:not(:first-child)
+      border-top: 1px solid $main_highlight
+
+    th:first-child, td:first-child
+      min-width: 400px
+
+    th:nth-child(2), td:nth-child(2), th:nth-child(3), td:nth-child(3)
+      width: 100px
+      text-align: center
+
+    thead
+      padding: 0
+      margin: 0
+      background-color: $main_highlight
+      color: $contrast_to_main_highlight
+
+      th
+        font-family: $highlight_font_family
+        letter-spacing: 0.05em
+        font-weight: $bolder
+        font-size: 0.8em
+        padding: 0.5em 0
+
+      th:first-child, th:last-child
+        padding-left: $side_space
+
+      &:first-child, &:last-child
+        text-align: left
+
+    tbody
+      tr:nth-child(even)
+        background-color: $softer_background
+
+      td:first-child
+        display: flex
+        align-items: center
+
+      td:not(:first-child)
+        padding: 0.5em 0.7em
+
+      td
+        padding: 0.5em 0
+        height: 2em
+
+        .icon-btn-col
+          width: 2.3em
+          display: inline-block
+          margin: 0 0.7em
+          float: left
+          display: flex
+          justify-content: center
+          align-items: center
+
+          i
+            color: $main_highlight
+            font-size: 2em
+
+        .details-col
+          display: inline-block
+          width: auto
+
+          .title
+            font-weight: $bold
+            letter-spacing: 0
+            font-size: 0.9em
+            margin: 0
+
+          .extra-info
+            font-size: 0.8em
+
+      td:not(:first-child)
+        font-size: 0.8em
+
+      td:first-child
+        a
+          color: $strong_highlight
+          font-size: 1.05em

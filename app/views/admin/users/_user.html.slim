@@ -1,0 +1,12 @@
+tr
+  td.name
+    .icon-btn-col
+      = button_to 'Edit', edit_admin_user_path(user), method: :get, class: 'btn'
+    .details-col
+      h3.title
+        = link_to user.username, profile_user_path(user)
+  td.user_status = user.status
+  td.user_role = user.role
+  td = user.last_sign_in_at.strftime(ConstantsHelper::DATETIME_FORMAT)
+  td = user.topics.size
+  td = user.posts.size
