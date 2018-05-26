@@ -1,0 +1,22 @@
+.admin
+  .table-container
+    margin: 0
+    width: 100%
+
+    table
+      th:not(:first-child), td:not(:first-child)
+        text-align: center
+
+      th:nth-child(2), td:nth-child(2), th:nth-child(3), td:nth-child(3)
+        width: auto
+
+      th:first-child, td:first-child
+        min-width: auto
+
+      tbody
+        td.user_status, td.user_role
+          text-transform: capitalize
+
+        td
+          .icon-btn-col
+            width: 3.3em

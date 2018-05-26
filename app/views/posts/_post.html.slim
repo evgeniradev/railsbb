@@ -1,0 +1,14 @@
+- user = post.user
+- topic = post.topic
+
+.post id = id_element(post, topic)
+  .user
+    = user_link user
+    = user_info user
+  .post-content
+    .post-header
+      .post-zone
+        = zone post, topic
+      .post-actions
+        = actions post, topic
+    .post-text.ck-editor = post.content.html_safe

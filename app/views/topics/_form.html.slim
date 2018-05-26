@@ -1,0 +1,11 @@
+- # This ensures that the cktext_area_tag's border changes to red.
+- # Needed as { class: 'field_with_errors' } adds the class to the wrong element
+- field_with_errors = 'field_with_errors' if content_invalid?
+
+= render 'shared/form_errors', errors: flash[:errors]
+= form_for @topic, url: action, html: { class: 'general-form' } do | f |
+  = f.text_field :title, class: 'title', placeholder: 'Title'
+  div class = field_with_errors
+    = cktext_area_tag :content, topic_content, placeholder: 'Content'
+  = f.hidden_field :forum_id, value: forum.id
+  = f.submit class: 'btn-submit', value: 'Submit'

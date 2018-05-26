@@ -1,0 +1,13 @@
+- @heading = 'Log in'
+
+.standard-container.form-container.registrations.public
+  h2 #{@heading}
+  = form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'login-signup' }) do |f|
+    = f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: 'Email', class: 'email'
+    = f.password_field :password, autocomplete: 'off', placeholder: 'Password'
+    - if devise_mapping.rememberable?
+      .checkbox-wrapper
+        = f.check_box :remember_me
+        = f.label :remember_me
+    = f.submit 'Log in', class: 'btn-submit'
+    = link_to 'Forgotten password', new_user_password_path, class: 'btn'

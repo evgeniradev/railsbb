@@ -1,0 +1,48 @@
+.content-menu
+  .col-1
+    h2 Announcements
+    button Add Post
+  .col-2
+    ul.pagination
+      li 
+        a 1
+      li 
+        a 2
+      li 
+        a 3
+      li 
+        a 4
+.posts-container
+  - (1...4).each do
+    .post
+      .user
+        p.username this_is_my_username
+        ul.user-info
+          li
+            'Posts:
+            span 232
+          li
+            'Joined: 
+            span Fri 4 Jan, 2018 22:30
+          li
+            'Location: 
+            span Sydney, Austlia Austrsdiiiii
+      .post-content
+        .post-header
+          .post-date
+            p Posted on Fri 4 Jan, 2018 22:30
+          .post-actions
+            button.btn-post Edit
+            button.btn-post Reply
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod urna et ante placerat porttitor. Sed venenatis tempus orci, eu eleifend justo blandit sed. Maecenas ex augue, sollicitudin vel feugiat dignissim, posuere et purus. Donec ac molestie lacus. Nam vel nisl eget dolor suscipit euismod. Ut vulputate sed leo eget aliquam. Pellentesque egestas lacus ante. Phasellus semper mi ornare, volutpat erat at, sodales mauris. Morbi a neque velit. Etiam et tristique orci.
+
+  ul.pagination.bottom
+    li 
+      a 1
+    li 
+      a 2
+    li 
+      a 3
+    li 
+      a 4

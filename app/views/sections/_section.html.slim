@@ -1,0 +1,10 @@
+.table-container
+  table
+    thead
+      tr
+        th = title(section)
+        th Topics
+        th Posts
+        th Latest Post
+    tbody
+      = render section.forums

@@ -1,0 +1,56 @@
+.content-menu
+  .col-1
+    h2 Announcements
+    button Add Topic
+  .col-2
+    ul.pagination
+      li 
+        a 1
+      li 
+        a 2
+      li 
+        a 3
+      li 
+        a 4
+.table-container.forum
+  table
+    thead
+      tr
+        th Topic
+        th Posts
+        th Views
+        th Latest Post
+    tbody
+      - (1...5).each do
+        tr
+          td 
+            .icon-btn-col
+              i.fa.fa-telegram
+            .details-col
+              h3.title
+                a href='#' Announcements
+              p.extra-info 
+                | Fri 4 Jan, 2018 22:30
+                span.post-author  
+                  |  by 
+                  a href='#' John
+          td 10
+          td 321
+          td
+            p.post-title 
+              a href='#' Re: Temporary Fix to a major... 
+            p.post-date 
+              | Fri 4 Jan, 2018 22:30
+              span.post-author  
+                |  by 
+                a href='#' John
+
+ul.pagination.bottom
+  li 
+    a 1
+  li 
+    a 2
+  li 
+    a 3
+  li 
+    a 4

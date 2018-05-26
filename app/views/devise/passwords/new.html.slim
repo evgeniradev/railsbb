@@ -1,0 +1,8 @@
+- @heading = 'Forgot your password?'
+
+.standard-container.registrations.public
+  h2 = @heading
+  = render 'shared/form_errors', errors: devise_error_messages!
+  = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }, html: { class: 'login-signup' }) do |f|
+    = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email'
+    = f.submit "Send me reset password instructions", class: 'btn-submit'

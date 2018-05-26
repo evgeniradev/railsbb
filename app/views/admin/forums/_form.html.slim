@@ -1,0 +1,10 @@
+.form-container
+  = render 'shared/form_errors', errors: flash[:errors]
+  = form_for @forum, url: action, html: { class: 'general-form' } do | f |
+    = f.text_field :title, class: 'title', placeholder: 'Title'
+    = f.text_field :description, class: 'title', placeholder: 'Description'
+    = f.collection_select(:section_id, Section.all, :id, :title, :prompt => 'Section')
+    = f.submit class: 'btn-submit', value: 'Submit'
+  - if action_name == 'edit'
+    = button_to('Delete', admin_forum_path(@forum), method: :delete, class: 'btn-submit btn-delete', data: { confirm: 'Are you sure?' })
+

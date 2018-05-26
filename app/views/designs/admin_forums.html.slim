@@ -1,0 +1,42 @@
+.content-menu
+  .col-1
+    h2 Manage Forums
+    button Add Section
+  .col-2
+    .search-container
+      form action='' 
+        input.search name='search' placeholder='Search' type='text' /
+        button.btn-search type='submit'
+          i.fa.fa-search
+.wrapper
+  .table-container.admin
+    table
+      thead
+        tr
+          th Title
+          th.section-name Section
+          th Topics
+          th Posts
+      tbody
+        - (1...5).each do
+          tr
+            td 
+              .icon-btn-col
+                button Edit
+              .details-col
+                h3.title
+                  a href='#' Announcements
+                p.extra-info Need a break from wondering just what the dead do? This is the. 
+            td
+              a href='#' The General Section
+            td 321
+            td 321
+ul.pagination.bottom
+  li 
+    a 1
+  li 
+    a 2
+  li 
+    a 3
+  li 
+    a 4

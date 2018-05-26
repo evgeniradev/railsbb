@@ -1,0 +1,20 @@
+- @heading = 'User Profile'
+
+.standard-container.profile
+  h2 = @heading
+  ul
+    li
+      p.row-title  Username:
+      p.data = @user.username
+    li
+      p.row-title Join Date:
+      p.data = @user.created_at.strftime(ConstantsHelper::DATETIME_FORMAT)
+    li
+      p.row-title Topics:
+      p.data = @user.topics.size
+    li
+      p.row-title Posts:
+      p.data = @user.posts.size
+    li
+      p.row-title Latest Post:
+      p.data = latest_user_post_link

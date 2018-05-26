@@ -1,0 +1,22 @@
+version: '3'
+services:
+  railsbb_postgres:
+    image: postgres:11.3
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+  railsbb_nginx:
+    build:
+      context: .
+      dockerfile: ./Dockerfile-nginx
+    ports:
+      - '80:80'
+    depends_on:
+      - railsbb_app
+      - railsbb_postgres
+  railsbb_app:
+    build: .
+    command: /bin/sh -c "rm -f /railsbb/tmp/pids/server.pid && bundle exec rails s -p 3000 -b 0.0.0.0"
+    volumes:
+      - .:/railsbb
+    depends_on:
+      - railsbb_postgres

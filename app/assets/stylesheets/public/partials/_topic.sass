@@ -1,0 +1,71 @@
+.public
+  .posts-container
+    .post
+      border: $soft_border
+      border-radius: $standard_radius
+      background-color: $soft_background
+      display: flex
+
+      .user
+        padding: 0.8em
+        padding-right: 1em
+        width: 14em
+        font-family: $base_font_family
+
+        a.username
+          font-size: 0.9em
+          font-weight: $bold
+          color: $strong_highlight
+
+        ul.user-info
+          margin-top: 0.8em
+          padding: 0
+
+          li
+            font-size: 0.8em
+            margin-top: 0.2em
+            span:first-child
+              color: $softest_text
+
+            span:last-child
+              margin-left: 0.2em
+              color: $soft_text
+
+      .post-content
+        border-left: 1px solid $contrast_to_main_highlight
+        padding: 0.8em 1em
+        width: 100%
+        font-size: 0.9em
+        line-height: 1.5em
+
+        .post-header
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+          margin-bottom: 1em
+
+          .post-zone
+            li
+              display: inline-block
+              white-space: pre
+
+              p
+                color: $softest_text
+                font-size: 0.9em
+
+          .post-actions
+            form
+              display: inline-block
+              margin-left: 0.5em
+
+      &:nth-child(even)
+        background-color: $softer_background
+
+        .post-content
+          border-left: $soft_border
+
+    .post:not(:first-child)
+      margin-top: $sections_space_between
+
+    ul.pagination
+      margin-top: $pagination_margin

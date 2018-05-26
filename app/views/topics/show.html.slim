@@ -1,0 +1,11 @@
+- @order_by = :created_at
+
+.content-menu
+  .col-1
+    h2 = link_to_self @topic
+    = add_button @topic
+  .col-2
+    = paginate posts
+.posts-container
+  = render prepare posts
+  = paginate posts

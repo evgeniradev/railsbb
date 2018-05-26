@@ -1,0 +1,40 @@
+.content-menu
+  .pagination
+    margin-top: 0
+
+.pagination
+  margin-top: 1em
+  background: white
+  cursor: default
+  display: flex
+  justify-content: flex-end
+
+  a, span, em
+    padding: 0.1em 0.6em
+    display: flex
+    align-items: center
+    float: left
+    margin-right: 1px
+    font-size: 0.95em
+    font-family: $highlight_font_family
+    font-style: normal
+
+  a:not(:nth-child(2)), em:not(:nth-child(2))
+    border-left: $strong_border
+
+  .previous_page, .next_page
+    border-radius: $standard_radius
+    background-color: $softer_background
+    border: $strong_border
+
+  .disabled
+    color: #999999
+    border: 1px solid #dddddd
+
+  a
+    text-decoration: none
+    color: $strong_highlight
+
+    &:hover, &:focus
+      color: $strongest_highlight
+      border-color: $strongest_highlight

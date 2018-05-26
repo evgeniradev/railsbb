@@ -1,0 +1,20 @@
+- @order_by = { updated_at: :desc }
+
+.content-menu
+  .col-1
+    h2 = link_to_self @forum
+    = add_button @forum
+  .col-2
+    = paginate(topics)
+  = flash[:notify]
+.table-container.forum
+  table
+    thead
+      tr
+        th Topic
+        th Posts
+        th Views
+        th Latest Post
+    tbody
+      = render prepare topics
+= paginate topics

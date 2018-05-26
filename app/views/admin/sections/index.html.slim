@@ -1,0 +1,12 @@
+= render 'header'
+.table-container
+  table
+    thead
+      tr
+        th Title
+        th Forums
+        th Topics
+        th Posts
+    tbody
+      = render prepare @sections
+= paginate @sections

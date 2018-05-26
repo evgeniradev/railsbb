@@ -1,0 +1,11 @@
+- @order_by = :created_at
+- @heading = 'Search Results'
+
+.content-menu
+  .col-1
+    h2 = @heading + (': %s ' % @posts.size) + (@posts.size != 1 ? 'posts' : 'post')
+  .col-2
+    = paginate @posts
+.posts-container
+  = render prepare @posts
+  = paginate @posts

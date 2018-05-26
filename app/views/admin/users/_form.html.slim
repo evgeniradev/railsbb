@@ -1,0 +1,12 @@
+.form-container
+  = render 'shared/form_errors', errors: flash[:errors]
+  = form_for @user, url: action, html: { class: 'general-form' } do | f |
+    = f.text_field :username, class: 'title', placeholder: 'Username'
+    = f.email_field :email, class: 'title', placeholder: 'Email'
+    = f.select :status, User.statuses.map { |key, value| [key.humanize, key] }
+    = f.select :role, User.roles.map { |key, value| [key.humanize, key] }
+    = f.submit class: 'btn-submit', value: 'Submit'
+  - if action_name == 'edit'
+    = button_to('Delete', admin_user_path(@user), method: :delete, class: 'btn-submit btn-delete', data: { confirm: 'Are you sure?' })
+
+

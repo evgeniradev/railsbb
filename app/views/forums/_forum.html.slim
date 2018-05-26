@@ -1,0 +1,12 @@
+tr
+  td
+    .icon-btn-col
+      i.fa.fa-telegram
+    .details-col
+      h3.title
+        = link_to forum.title, forum
+      p.extra-info = forum.description
+  td = forum.topics.size
+  td = forum.posts.size
+  td
+    = latest_post forum
